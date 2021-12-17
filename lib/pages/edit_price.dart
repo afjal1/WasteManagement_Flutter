@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_text.dart' as customText;
@@ -34,7 +36,7 @@ class _EditPricePageState extends State<EditPricePage> {
               customText.TitleText(
                 text:
                     'Vendors are more likely to accept offers within their set rate',
-                textColor: Theme.of(context).accentColor,
+                textColor: Theme.of(context).colorScheme.secondary,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -54,6 +56,7 @@ class _EditPricePageState extends State<EditPricePage> {
                       initialValue: widget.defaultPrice,
                       keyboardType: TextInputType.numberWithOptions(
                           decimal: false, signed: false),
+                      // ignore: missing_return
                       validator: (String value) {
                         if (value.isEmpty) {
                           return 'Please enter a price';

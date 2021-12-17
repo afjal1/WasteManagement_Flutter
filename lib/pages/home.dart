@@ -1,11 +1,10 @@
-import 'dart:convert';
+// ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../scoped_models/main.dart';
 
-import '../widgets/custom_text.dart' as customText;
 import '../widgets/bottom_nav.dart';
 
 import '../utils/responsive.dart';
@@ -13,7 +12,6 @@ import '../utils/responsive.dart';
 import './dispose/dispose_waste.dart';
 import './recycle/recycle_waste.dart';
 import './decluster/decluster.dart';
-import './wallet/wallet.dart';
 import './wallet/transactions.dart';
 
 class HomePage extends StatelessWidget {
@@ -136,6 +134,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   Widget _buildSlidingSection(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: pad_vertical, horizontal: 10),
